@@ -1,5 +1,4 @@
 class Sticks
-  # TODO: use attr_reader
   attr_accessor :stick_amount, :p_1_s_t, :p_2_s_t, :a_i
 
   def initialize(stick_amount, p_1_s_t, p_2_s_t, a_i)
@@ -26,9 +25,8 @@ class Sticks
     @p_2_s_t += p_2
     @stick_amount -= p_2
   end
-
-  def
 end
+
 
 game = Sticks.new(50, 0, 0, rand(1..5))
 
@@ -54,6 +52,7 @@ until game.stick_amount <= 0.to_i do
   puts "Player Two, pick up 1-5 sticks"
   game.get_ai_pickup_sticks
   p_2 = game.a_i
+  puts p_2
   game.p_2_stick_change(p_2)
 end
-puts "game over!"
+puts "GAME OVER MOTHAFUCKA"
